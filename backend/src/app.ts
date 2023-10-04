@@ -1,11 +1,14 @@
 import "dotenv/config";
+import * as dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import itemRouters from "./routes/itemRoutes";
 import authRouters from "./routes/authRoutes";
 import cors from "cors";
+
 const app = express();
 
+dotenv.config();
 const db: any = process.env.dbURI;
 
 mongoose
